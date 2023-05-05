@@ -130,7 +130,7 @@ def invoke_with_single_sentence(list_data, endpoint_name, variant_name):
 
 
 def invoke_endpoint_for_two_minutes(endpoint_name=None):
-    with open("../sample_payload/batch_data.csv", "r") as f:
+    with open("./sample_payload/batch_data.csv", "r") as f:
         for row in f:
             print(".", end="", flush=True)
             payload = row.rstrip("\n")
@@ -164,7 +164,7 @@ def invoke_endpoint_max_invocations(
     nm_rounds = round(max_invocations/100)
     count = 0
     for i in range(nm_rounds):
-        with open("../sample_payload/batch_data.csv", "r") as f:
+        with open("./sample_payload/batch_data.csv", "r") as f:
             for row in f:
                 payload = row.rstrip("\n")
                 try:
